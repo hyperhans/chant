@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" class="full-height">
+<head>
+    <title></title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        #chant_logo_wht {
+            text-align: center;
+            height: 30px;
+        }
+
+        .navbar {
+            background: transparent !important;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+        }
+
+        body {
+            background: -webkit-linear-gradient(45deg, rgba(83, 125, 210, 0.5), rgba(6, 67, 51, 0.5) 100%);
+            height: 100%;
+            margin: 0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+            font-family: Roboto, sans-serif;
+        }
+
+        @media (min-width: 520px) {
+            .blocky {
+                background-color: rgba(229, 228, 255, 0.3);
+                width: 50%;
+                height: 200px;
+                min-width: 200px;
+                max-width: 400px;
+                padding: 30px;
+                margin: auto;
+                position: absolute;
+                top: 0; left: 0; bottom: 0; right: 0;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .blocky {
+                background-color: transparent;
+            }
+        }
+
+        .navbar-header {
+            float: left;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .navbar-brand {
+            float:none;
+        }
+
+        #secondDiv {
+            text-align: center;
+        }
+
+        .btn {
+            margin-top: 20px;
+            border-radius: 0px;
+            border: 0;
+            -webkit-transition: .2s ease-out;
+            transition: .2s ease-out;
+            word-wrap: break-word;
+            cursor: pointer;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+            background-color: #fff;
+            color: #4f4f4f !important;
+            font-family: Roboto, sans-serif;
+            font-weight: 500 !important;
+            float: right;
+        }
+
+        .btn-primary:hover {
+            color: white !important;
+        }
+
+        @font-face {
+            font-family: Roboto;
+            src: local(Roboto Thin), url(../font/roboto/Roboto-Thin.eot);
+            src: url(./font/Roboto-Thin.eot?#iefix) format("embedded-opentype"),
+                url(./font/Roboto-Thin.woff2) format("woff2"),
+                url(./font/Roboto-Thin.woff) format("woff"),
+                url(./font/Roboto-Thin.ttf) format("truetype");
+            font-weight: 200
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#secondDiv").hide();
+            //getComments(1);
+            $("a").click(function() {
+                $("#firstDiv").fadeOut(300, function() {
+                    $("#secondDiv").fadeIn(300);
+                });
+                //$("#secondDiv").show();
+            });
+        });
+
+    </script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#"><img id="chant_logo_wht" src="./img/Chant_Logo_1.0_wht.svg" class="img-fluid" alt="Responsive image"></a>
+    </div>
+    </div>
+</nav>
+<div class="container blocky">
+    <div id="firstDiv">
+        <h4 float="center">Sign up to hear more</h4>
+        <input id="email" type="email" class="form-control" placeholder="Enter email">
+        <a type="button" class="btn btn-primary">SUBSCRIBE</a>
+    </div>
+    <div id="secondDiv">
+        <h3>Thanks for subscribing.</h3>
+    </div>
+</div>
+</body>
+</html>
