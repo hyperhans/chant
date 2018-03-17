@@ -12,9 +12,12 @@ import java.net.URISyntaxException;
 public class DbConfig {
 
     @Bean
-    public DataSource dataSource() throws URISyntaxException {
-        URI dbUri;
+    public BasicDataSource dataSource() throws URISyntaxException {
+        /**URI dbUri;
         try {
+
+            return basicDataSource;
+
             String username="";
             String password="";
             String url = "";
@@ -31,6 +34,15 @@ public class DbConfig {
             return dataSource;
         } catch (URISyntaxException e) {
             throw e;
-        }
+        }*/
+        String dbUrl = System.getenv("JDBC_DATABASE_URL");
+        String username = System.getenv("JDBC_DATABASE_USERNAME");
+        String password = System.getenv("JDBC_DATABASE_PASSWORD");
+
+        BasicDataSource basicDataSource = new BasicDataSource();
+        basicDataSource.setUrl(dbUrl);
+        basicDataSource.setUsername(username);
+        basicDataSource.setPassword(password);
+        return basicDataSource;
     }
 }
