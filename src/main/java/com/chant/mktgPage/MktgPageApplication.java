@@ -3,14 +3,16 @@ package com.chant.mktgPage;
 import com.chant.config.JerseyConfig;
 import org.glassfish.jersey.servlet.ServletContainer;
 import org.glassfish.jersey.servlet.ServletProperties;
-//import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.builder.SpringApplicationBuilder;
+//import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+@Configuration
 @EnableAutoConfiguration
 @ComponentScan
 @EnableJpaRepositories
@@ -24,7 +26,7 @@ public class MktgPageApplication {
 	}
 
 	public static void main(String[] args) {
-		//SpringApplication.run(MktgPageApplication.class, args);
-		new SpringApplicationBuilder(MktgPageApplication.class).run(args);
+		SpringApplication.run(MktgPageApplication.class, args);
+		//new SpringApplicationBuilder(MktgPageApplication.class).run(args);
 	}
 }
