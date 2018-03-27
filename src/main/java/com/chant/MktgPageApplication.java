@@ -1,4 +1,4 @@
-package com.chant.mktgPage;
+package com.chant;
 
 import com.chant.config.JerseyConfig;
 import org.glassfish.jersey.servlet.ServletContainer;
