@@ -27,6 +27,12 @@ public class EmailResource {
     }
 
     @GET
+    @Path("/hi")
+    public String hello() {
+        return "hi";
+    }
+
+    @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Email getEmailDetails(@PathParam("id") Long id) {
