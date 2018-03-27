@@ -28,7 +28,7 @@ public class EmailResource {
 
     @GET
     @Path("/hi")
-    @Produces(MediaType.TEXT_XML)
+    @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
         return "hi";
     }
