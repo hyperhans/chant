@@ -15,15 +15,15 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan
-@EnableJpaRepositories
+@EnableJpaRepositories({"com.chant.repositories"})
 public class MktgPageApplication {
 
-	@Bean
+	/**@Bean
 	public ServletRegistrationBean jerseyServlet() {
 		ServletRegistrationBean registration = new ServletRegistrationBean(new ServletContainer(), "/rest/*");
 		registration.addInitParameter(ServletProperties.JAXRS_APPLICATION_CLASS, JerseyConfig.class.getName());
 		return registration;
-	}
+	}*/
 
 	public static void main(String[] args) {
 		SpringApplication.run(MktgPageApplication.class, args);
